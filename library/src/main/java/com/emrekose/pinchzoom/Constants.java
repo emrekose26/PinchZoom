@@ -8,8 +8,8 @@ public class Constants {
     public static final int DRAG = 1;
     public static final int ZOOM = 2;
 
-    private static final float MIN_ZOOM = 1f;
-    private static final float MAX_ZOOM = 5f;
+    public static final float MIN_ZOOM = 1f;
+    public static final float MAX_ZOOM = 5f;
 
     public static final String TAG = "TOUCH";
 }

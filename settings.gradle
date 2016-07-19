@@ -1,1 +1,1 @@
-include ':app', ':pinchzoom'
+include ':app', ':library'
