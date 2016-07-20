@@ -21,19 +21,32 @@ public class Touch implements View.OnTouchListener {
     private int mode = Constants.NONE;
     private float oldDist = 1f;
 
+
+    private float maxZoom = Constants.MAX_ZOOM;
+    private float minZoom = Constants.MIN_ZOOM;
     private float dx; // postTranslate X distance
     private float dy; // postTranslate Y distance
     private float[] matrixValues = new float[9];
+
+
     float matrixX = 0; // X coordinate of matrix inside the ImageView
     float matrixY = 0; // Y coordinate of matrix inside the ImageView
     float width = 0; // width of drawable
     float height = 0; // height of drawable
+
+    public Touch() {}
+
+    public Touch(float maxZoom,float minZoom) {
+        this.maxZoom = maxZoom;
+        this.minZoom = minZoom;
+    }
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
 
         ImageView view = (ImageView) v;
         view.setScaleType(ImageView.ScaleType.MATRIX);
+
 
         // Handle touch events here...
         switch (event.getAction() & MotionEvent.ACTION_MASK) {
