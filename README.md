@@ -1,7 +1,7 @@
 PinchZoom
 ===============
  
-[![](https://jitpack.io/v/emrekose26/PinchZoom.svg)](https://jitpack.io/#emrekose26/PinchZoom) [![](https://img.shields.io/badge/Android%20Arsenal-PinchZoom-brightgreen.svg)]() 
+[![](https://jitpack.io/v/emrekose26/PinchZoom.svg)](https://jitpack.io/#emrekose26/PinchZoom) 
 
 PinchZoom is a supported library the pinch gestures for Android
 
