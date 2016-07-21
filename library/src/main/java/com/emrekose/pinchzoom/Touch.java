@@ -55,7 +55,7 @@ public class Touch implements View.OnTouchListener {
                 savedMatrix.set(matrix);
                 start.set(event.getX(), event.getY());
 
-                Log.d(Constants.TAG, "mode=DRAG" );
+                Log.d(Constants.TAG, "mode = DRAG" );
 
                 mode = Constants.DRAG;
 
@@ -66,21 +66,21 @@ public class Touch implements View.OnTouchListener {
             case MotionEvent.ACTION_POINTER_UP: //second finger lifted
                 mode = Constants.NONE;
 
-                Log.d(Constants.TAG, "mode=NONE" );
+                Log.d(Constants.TAG, "mode = NONE" );
 
                 break;
 
             case MotionEvent.ACTION_POINTER_DOWN: //second finger down
                 oldDist = spacing(event);
 
-                Log.d(Constants.TAG, "oldDist=" + oldDist);
+                Log.d(Constants.TAG, "oldDist = " + oldDist);
 
                 if (oldDist > 10f) {
                     savedMatrix.set(matrix);
                     midPoint(mid, event);
                     mode = Constants.ZOOM;
 
-                    Log.d(Constants.TAG, "mode=ZOOM" );
+                    Log.d(Constants.TAG, "mode = ZOOM" );
                 }
 
                 break;
@@ -101,7 +101,7 @@ public class Touch implements View.OnTouchListener {
 
                     //if image will go outside left bound
                     if (matrixX + dx  > 0){
-                        Log.e("dx","lef bound " + dx);
+                        Log.e("dx","left bound " + dx);
                         dx = -matrixX;
                     }
                     //if image will go outside right bound
@@ -122,7 +122,7 @@ public class Touch implements View.OnTouchListener {
                 else if (mode == Constants.ZOOM) {
                     Float newDist = spacing(event);
 
-                    Log.d(Constants.TAG, "newDist=" + newDist);
+                    Log.d(Constants.TAG, "newDist = " + newDist);
 
                     if (newDist > 10f) {
                         matrix.set(savedMatrix);

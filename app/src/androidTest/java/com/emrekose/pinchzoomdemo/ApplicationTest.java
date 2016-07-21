@@ -1,4 +1,4 @@
-package com.emrekose.pinchzoom;
+package com.emrekose.pinchzoomdemo;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
