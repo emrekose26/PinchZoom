@@ -1,7 +1,7 @@
 PinchZoom
 ===============
  
-[![](https://img.shields.io/badge/Android%20Arsenal-PinchZoom-brightgreen.svg)]() [![](https://jitpack.io/v/com.github.emrekose26/pinchzoom.svg)](https://jitpack.io/#com.github.emrekose26/pinchzoom)
+[![](https://jitpack.io/v/emrekose26/PinchZoom.svg)](https://jitpack.io/#emrekose26/PinchZoom) [![](https://img.shields.io/badge/Android%20Arsenal-PinchZoom-brightgreen.svg)]() 
 
 PinchZoom is a supported library the pinch gestures for Android
 
@@ -13,6 +13,7 @@ Add it in your root build.gradle at the end of repositories
 ```
 allprojects {
     repositories {
+        ...
         maven { url "https://jitpack.io" }
     }
 }	
@@ -21,7 +22,7 @@ Add the dependency
 ```
 dependencies {
     ...
-    compile 'com.emrekose:pinchzoom'
+    compile 'com.github.emrekose26:PinchZoom:-SNAPSHOT'
 }
 ```
 
@@ -48,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     
 ```
 
-If you want to change default max and min zoom values
+If you want to change default min and max zoom values
 
 ```
    imageView.setOnTouchListener(new Touch(2f,6f));
@@ -78,4 +79,4 @@ In your xml file :
 ### Copyright and license
 
 Code and documentation copyright 2016 Emre Köse
-Code released under the [MIT license](https://github.com/emrekose26/PinchZoom/blob/master/LICENSE.md).
+Code released under the [MIT license](https://github.com/emrekose26/PinchZoom/blob/master/LICENSE.md)
