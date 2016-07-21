@@ -17,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
 
         imageView = (ImageView)findViewById(R.id.imageView);
 
-        imageView.setOnTouchListener(new Touch());
+
+        //imageView.setOnTouchListener(new Touch());
+
+        //if you change default min and max zoom values
+        imageView.setOnTouchListener(new Touch(2f,6f));
     }
 }

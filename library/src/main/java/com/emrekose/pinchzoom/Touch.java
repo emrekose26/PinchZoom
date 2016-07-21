@@ -22,8 +22,8 @@ public class Touch implements View.OnTouchListener {
     private float oldDist = 1f;
 
 
-    private float maxZoom = Constants.MAX_ZOOM;
-    private float minZoom = Constants.MIN_ZOOM;
+    public static float maxZoom;
+    public static float minZoom;
     private float dx; // postTranslate X distance
     private float dy; // postTranslate Y distance
     private float[] matrixValues = new float[9];
@@ -34,9 +34,12 @@ public class Touch implements View.OnTouchListener {
     float width = 0; // width of drawable
     float height = 0; // height of drawable
 
-    public Touch() {}
+    public Touch() {
+        this.maxZoom = Constants.MAX_ZOOM;
+        this.minZoom = Constants.MIN_ZOOM;
+    }
 
-    public Touch(float maxZoom,float minZoom) {
+    public Touch(float minZoom,float maxZoom) {
         this.maxZoom = maxZoom;
         this.minZoom = minZoom;
     }
@@ -131,11 +134,11 @@ public class Touch implements View.OnTouchListener {
                         matrix.getValues(values);
                         float currentScale = values[Matrix.MSCALE_X];
 
-                        if(scale * currentScale > Constants.MAX_ZOOM)
-                            scale = Constants.MAX_ZOOM / currentScale;
+                        if(scale * currentScale > maxZoom)
+                            scale = maxZoom / currentScale;
 
-                        else if (scale * currentScale < Constants.MIN_ZOOM)
-                            scale = Constants.MIN_ZOOM / currentScale;
+                        else if (scale * currentScale < minZoom)
+                            scale = minZoom / currentScale;
 
                         matrix.postScale(scale, scale, mid.x, mid.y);
 
