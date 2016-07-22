@@ -1,4 +1,5 @@
 language: android
+
 android:
   components:
     - tools
@@ -6,6 +7,8 @@ android:
     - build-tools-23.0.3
     - android-23
 
+script: "./gradlew build"
+
     # Support library
-        - extra-android-support
-        - extra-android-m2repository
+    - extra-android-support
+    - extra-android-m2repository
