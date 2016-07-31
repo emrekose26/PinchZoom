@@ -1,7 +1,8 @@
 PinchZoom
 ===============
  
-[![](https://jitpack.io/v/emrekose26/PinchZoom.svg)](https://jitpack.io/#emrekose26/PinchZoom) 
+[![](https://jitpack.io/v/emrekose26/PinchZoom.svg)](https://jitpack.io/#emrekose26/PinchZoom)  [![](https://img.shields.io/badge/platform-android-green.svg)]() [![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?maxAge=2592000)](https://github.com/emrekose26/PinchZoom/blob/master/LICENSE.md)
+
 
 PinchZoom is a supported library the pinch gestures for Android
 
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 If you want to change default min and max zoom values
 
-```
+```java
    imageView.setOnTouchListener(new Touch(2f,6f));
 ```
 
